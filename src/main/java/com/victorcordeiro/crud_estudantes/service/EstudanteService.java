@@ -29,9 +29,7 @@ public class EstudanteService implements IEstudanteService {
         if(estudanteAlreadyExists(estudante.getEmail())) {
             throw new EstudanteAlreadyExistsException("Já existe estudante com esse email: " + estudante.getEmail());
         }
-
-
-
+        // Se não existir, salva o estudante
         return estudanteRepository.save(estudante);
     }
 

@@ -37,10 +37,17 @@ public class EstudanteController {
         return estudanteService.updateEstudante(estudante, id);
     }
 
+
+    @DeleteMapping("/delete/{id}")
     public void deleteEstudante(@PathVariable Long id) {
         estudanteService.deleteEstudante(id);
     }
 
+
+    @GetMapping("/estudante/{id}")
+    public Estudante getEstudanteById(@PathVariable Long id) {
+        return estudanteService.getEstudanteById(id);
+    }
 
 
 

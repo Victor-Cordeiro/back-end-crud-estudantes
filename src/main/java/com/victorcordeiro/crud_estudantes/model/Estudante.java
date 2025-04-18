@@ -22,7 +22,7 @@ public class Estudante {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String Sobrenome;
+    private String sobrenome;
     @NaturalId(mutable = true)
     private String email;
     private String curso;
