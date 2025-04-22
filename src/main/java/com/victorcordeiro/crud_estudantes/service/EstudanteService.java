@@ -54,6 +54,7 @@ public class EstudanteService implements IEstudanteService {
         if(!estudanteRepository.existsById(id)) {
             throw new EstudanteNotFoundException("Estudante não encontrado com o id: " + id);
         }
+        estudanteRepository.deleteById(id);
 
     }
 
